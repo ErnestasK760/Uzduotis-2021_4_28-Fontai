@@ -9,51 +9,142 @@
     <title>Šriftai</title>
 </head>
     <style>
-        .pirmas {
+        #action {
+            width: 200px;
+            height: 50px;
+            border: none;
+            color: white;
+            margin-top: 50px;
+            background-color: rgb(255, 0, 68);
+            border-radius: 4px;
+            box-shadow: inset 0 0 0 0 #f9e506;
+            transition: ease-out 0.3s;
+            font-size: 20px;
+            outline: none;
+
+        }
+        #action:hover {
+            box-shadow: inset 200px 0 0 0 #f9e506;
+            cursor: pointer;
+            color: #000
+        }
+
+        #pirmas {
+
             float: left;
-            width: 50%;
+            width: 70%;
+            margin-left: 30px;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: inset 0 0 0 0 #f9e506;
+            transition: ease-out 0.3s;
+            outline: none;
+            padding-left: 30px;
         }
-        .antras {
+        #pirmas.styled {
+
             float: left;
-            width: 50%;
+            width: 70%;
+            margin-left: 30px;
+            background-color: #28334AFF;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            padding-left: 30px;
         }
-        .ubuntu h1 {
-            font-family: "Ubuntu" , sans-serif;
-            font-size: 24px;
+        
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .headers {
+            border: 7px solid black;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        #pirmas.showing h1 {
+        }
+        #pirmas.showing h3 {
+        }
+        #pirmas.showing h5 {
+        }
+
+        #pirmas.hidden h1 {
+            font-family: 'Ubuntu',sans-serif;
+            font-size: 30px;
             font-style: normal;
             font-variant: normal;
             font-weight: 700;
-            line-height: 45px;
+            line-height: 30px;
+            color:white;
         }
-        .ubuntu h3 {
-            font-family: "Ubuntu" , sans-serif;
-            font-size: 18px;
+        #pirmas.hidden h3 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
             font-style: normal;
             font-variant: normal;
             font-weight: 700;
-            line-height: 25px;
+            line-height: 27px;
+            color:white;
         }
-        .ubuntu h5 {
-            font-family: "Ubuntu" , sans-serif;
-            font-size: 14px;
+        #pirmas.hidden h5 {
+            font-family: 'Ubuntu',sans-serif;
+            font-size: 15px;
             font-style: normal;
             font-variant: normal;
             font-weight: 700;
-            line-height: 20px;
+            line-height: 5px;
+            color:white;
         }
+
     </style>
 <body>
-
-    <div class='pirmas ubuntu'>
-        <h1>Sveiki, aš esu h1 antraštė su Ubuntu fontu</h1>
-        <h3>Sveiki, aš esu h3 antraštė su Ubuntu fontu</h3>
-        <h5>Sveiki, aš esu h5 antraštė su Ubuntu fontu</h5>
-    </div>
-
-    <div class='antras'>
+   <div id="pirmas">
         <h1>Sveiki, aš esu h1 antraštė</h1>
         <h3>Sveiki, aš esu h3 antraštė</h3>
         <h5>Sveiki, aš esu h5 antraštė</h5>
+        <div class="flex-container">
+        <button id="action">Paspausk mane!</button>
+        </div>
     </div>
+    <script>
+        var content = document.getElementById("pirmas");
+        var button = document.getElementById("action");
+        var text = document.getElementsByTagName("h1")[0];
+        var text2 = document.getElementsByTagName("h3")[0];
+        var text3 = document.getElementsByTagName("h5")[0];
+
+        button.onclick = function(){
+           if(pirmas.className == "styled"){
+               content.className = "";
+               button.innerHTML= "Paspausk mane!"
+            } else {
+               content.className = "styled";
+               button.innerHTML = "Gražinti stiliu"
+           } 
+        }
+        button.onclick = function(){
+            if(pirmas.className == "showing"){
+                content.className = "hidden styled";
+                text.innerHTML = "Sveiki, aš esu h1 antraštė su Ubuntu fontu"
+                text2.innerHTML = "Sveiki, aš esu h3 antraštė su Ubuntu fontu"
+                text3.innerHTML = "Sveiki, aš esu h5 antraštė su Ubuntu fontu"
+            }else {
+                content.className = "showing";
+                text.innerHTML = "test"
+                text.innerHTML = "Sveiki, aš esu h1 antraštė"
+                text2.innerHTML = "Sveiki, aš esu h3 antraštė"
+                text3.innerHTML = "Sveiki, aš esu h5 antraštė"
+            }
+        }
+
+    </script>
 </body>
 </html>
