@@ -122,16 +122,8 @@
         var text3 = document.getElementsByTagName("h5")[0];
 
         button.onclick = function(){
-           if(pirmas.className == "styled"){
-               content.className = "";
-               button.innerHTML= "Paspausk mane!"
-            } else {
-               content.className = "styled";
-               button.innerHTML = "Gražinti stiliu"
-           } 
-        }
-        button.onclick = function(){
             if(pirmas.className == "showing"){
+                button.innerHTML = "Gražinti stilių!"
                 content.className = "hidden styled";
                 text.innerHTML = "Sveiki, aš esu h1 antraštė su Ubuntu fontu"
                 text2.innerHTML = "Sveiki, aš esu h3 antraštė su Ubuntu fontu"
@@ -142,6 +134,7 @@
                 text.innerHTML = "Sveiki, aš esu h1 antraštė"
                 text2.innerHTML = "Sveiki, aš esu h3 antraštė"
                 text3.innerHTML = "Sveiki, aš esu h5 antraštė"
+                button.innerHTML= "Paspausk mane!"
             }
         }
 
