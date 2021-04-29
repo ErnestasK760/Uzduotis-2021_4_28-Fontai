@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Šriftai</title>
 </head>
+
     <style>
+
         #action {
             width: 200px;
             height: 50px;
@@ -23,6 +25,7 @@
             outline: none;
 
         }
+
         #action:hover {
             box-shadow: inset 200px 0 0 0 #f9e506;
             cursor: pointer;
@@ -42,7 +45,9 @@
             transition: ease-out 0.3s;
             outline: none;
             padding-left: 30px;
+
         }
+
         #pirmas.styled {
 
             float: left;
@@ -58,6 +63,7 @@
         }
         
         .flex-container {
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -86,6 +92,7 @@
             line-height: 30px;
             color:white;
         }
+
         #pirmas.hidden h3 {
             font-family: 'Ubuntu', sans-serif;
             font-size: 20px;
@@ -95,6 +102,7 @@
             line-height: 27px;
             color:white;
         }
+
         #pirmas.hidden h5 {
             font-family: 'Ubuntu',sans-serif;
             font-size: 15px;
@@ -108,14 +116,21 @@
     </style>
 <body>
    <div id="pirmas">
-        <h1>Sveiki, aš esu h1 antraštė</h1>
-        <h3>Sveiki, aš esu h3 antraštė</h3>
-        <h5>Sveiki, aš esu h5 antraštė</h5>
+
+            <h1>Sveiki, aš esu h1 antraštė</h1>
+            <h3>Sveiki, aš esu h3 antraštė</h3>
+            <h5>Sveiki, aš esu h5 antraštė</h5>
+
         <div class="flex-container">
-        <button id="action">Paspausk mane!</button>
+
+            <button id="action">Paspausk mane!</button>
+
         </div>
+
     </div>
+
     <script>
+
         var content = document.getElementById("pirmas");
         var button = document.getElementById("action");
         var text = document.getElementsByTagName("h1")[0];
@@ -129,7 +144,7 @@
                 text.innerHTML = "Sveiki, aš esu h1 antraštė su Ubuntu fontu"
                 text2.innerHTML = "Sveiki, aš esu h3 antraštė su Ubuntu fontu"
                 text3.innerHTML = "Sveiki, aš esu h5 antraštė su Ubuntu fontu"
-            }else {
+            } else{
                 content.className = "showing";
                 text.innerHTML = "test"
                 text.innerHTML = "Sveiki, aš esu h1 antraštė"
